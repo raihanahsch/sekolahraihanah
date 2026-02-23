@@ -479,6 +479,154 @@
   /* ══════════════════════════════════
      RESPONSIVE
   ══════════════════════════════════ */
+  /* ── PORTAL TABS ── */
+  .portal-tabs {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    background: var(--sage-ultra); padding: 6px;
+    border-radius: 16px; border: 1px solid var(--sage-pale);
+    margin-bottom: 20px;
+  }
+  .ptab {
+    flex: 1; min-width: 130px; padding: 11px 14px;
+    border-radius: 11px; border: none; background: transparent;
+    cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem; font-weight: 600; color: var(--text-muted);
+    transition: all 0.2s; white-space: nowrap;
+  }
+  .ptab:hover { background: white; color: var(--text); }
+  .ptab.active {
+    background: white; color: var(--sage); font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .ptab-content { display: none; }
+  .ptab-content.active { display: block; animation: fadeIn 0.3s ease; }
+
+  .tab-inner {
+    background: white; border-radius: 20px; padding: 30px;
+    border: 1.5px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  }
+  .tab-section-title {
+    font-size: 1.1rem; font-weight: 800; color: var(--text);
+    margin-bottom: 4px;
+  }
+  .tab-section-sub {
+    font-size: 0.8rem; color: var(--text-muted); margin-bottom: 24px;
+  }
+
+  /* Mapel */
+  .mapel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .mapel-group { background: var(--cream); border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+  .mapel-group-head {
+    display: flex; align-items: center; gap: 9px;
+    padding: 13px 16px; font-size: 0.8rem; font-weight: 700; color: var(--text);
+    background: var(--sage-ultra); border-bottom: 1px solid var(--border);
+  }
+  .mapel-list { padding: 10px 16px; display: flex; flex-direction: column; }
+  .mapel-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; font-size: 0.86rem; color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+  }
+  .mapel-item:last-child { border-bottom: none; }
+  .mapel-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .mapel-dot.sage { background: var(--sage); }
+  .mapel-dot.gold { background: var(--gold); }
+
+  .jadwal-note {
+    background: var(--sage-ultra); border: 1px solid var(--sage-pale);
+    border-radius: 12px; padding: 13px 16px;
+    font-size: 0.82rem; color: var(--text-muted); line-height: 1.7;
+  }
+
+  /* Kalender */
+  .kalender-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+  .kal-item {
+    display: flex; align-items: center; gap: 16px;
+    background: var(--cream); border-radius: 13px; padding: 15px 18px;
+    border: 1px solid var(--border); transition: all 0.2s;
+  }
+  .kal-item:hover { border-color: var(--sage-pale); background: var(--sage-ultra); }
+  .kal-item.upcoming { border-color: var(--sage-pale); background: var(--sage-ultra); }
+  .kal-date { text-align: center; min-width: 40px; flex-shrink: 0; }
+  .kal-day { font-size: 1.4rem; font-weight: 900; color: var(--sage); line-height: 1; }
+  .kal-mon { font-size: 0.65rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+  .kal-info { flex: 1; }
+  .kal-title { font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+  .kal-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+  .kal-badge {
+    font-size: 0.68rem; font-weight: 700; padding: 4px 11px;
+    border-radius: 999px; white-space: nowrap; flex-shrink: 0;
+  }
+  .kal-badge.green { background: var(--sage-pale); color: var(--sage); }
+  .kal-badge.gold { background: var(--gold-pale); color: var(--gold); }
+  .kal-badge.red { background: #fde8e8; color: #c0392b; }
+  .kal-badge.muted { background: var(--cream); color: var(--text-muted); border: 1px solid var(--border); }
+
+  /* Pengumuman */
+  .pengumuman-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+  .peng-card {
+    border-radius: 14px; padding: 18px 20px;
+    border: 1px solid var(--border); background: var(--cream);
+  }
+  .peng-card.pinned { border-color: var(--sage-pale); background: var(--sage-ultra); }
+  .peng-meta { display: flex; align-items: center; gap: 9px; margin-bottom: 7px; flex-wrap: wrap; }
+  .peng-badge {
+    font-size: 0.67rem; font-weight: 700; padding: 3px 10px; border-radius: 999px;
+  }
+  .peng-badge.pin { background: var(--sage-pale); color: var(--sage); }
+  .peng-badge.info { background: #e8f0fe; color: #3b5bdb; }
+  .peng-badge.success { background: var(--sage-pale); color: var(--sage); }
+  .peng-date { font-size: 0.72rem; color: var(--text-muted); font-weight: 500; }
+  .peng-title { font-size: 0.93rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+  .peng-body { font-size: 0.84rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 8px; }
+  .peng-from { font-size: 0.74rem; color: var(--sage); font-weight: 600; font-style: italic; }
+
+  .kontak-cepat {
+    background: var(--cream); border-radius: 14px; padding: 18px 20px;
+    border: 1px solid var(--border);
+  }
+  .kc-title { font-size: 0.86rem; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+  .kc-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+  .kc-btn {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 9px 18px; border-radius: 999px; font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.82rem; font-weight: 700; text-decoration: none; transition: all 0.22s;
+  }
+  .kc-btn.wa { background: #25d366; color: white; box-shadow: 0 3px 12px rgba(37,211,102,0.28); }
+  .kc-btn.wa:hover { background: #1ebe5d; transform: translateY(-1px); }
+  .kc-btn.email { background: white; color: var(--sage); border: 1.5px solid var(--border); }
+  .kc-btn.email:hover { background: var(--sage-ultra); border-color: var(--sage-pale); }
+
+  /* Gallery */
+  .gdrive-box {
+    display: flex; align-items: center; gap: 16px;
+    background: var(--sage-ultra); border: 1.5px solid var(--sage-pale);
+    border-radius: 16px; padding: 20px 22px; margin-bottom: 22px;
+  }
+  .gdrive-icon { font-size: 2.2rem; flex-shrink: 0; }
+  .gdrive-title { font-size: 0.93rem; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+  .gdrive-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+  .btn-gdrive {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 26px; border-radius: 999px;
+    background: var(--sage); color: white; text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; font-weight: 700;
+    box-shadow: 0 4px 16px rgba(45,122,58,0.3); transition: all 0.25s;
+  }
+  .btn-gdrive:hover { background: var(--sage-hover,#1f5a2a); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(45,122,58,0.4); }
+  .gallery-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+  .gal-placeholder {
+    aspect-ratio: 1; background: var(--cream); border-radius: 14px;
+    border: 1.5px dashed var(--border);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 6px; transition: all 0.2s;
+  }
+  .gal-placeholder:hover { border-color: var(--sage-pale); background: var(--sage-ultra); }
+  .gal-ph-ico { font-size: 1.5rem; opacity: 0.45; }
+  .gal-ph-lbl { font-size: 0.7rem; color: var(--text-muted); font-weight: 600; text-align: center; }
+
+  /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     nav { padding: 16px 20px; }
     .nav-links { display: none; }
@@ -494,12 +642,18 @@
     .alumni-banner { flex-direction: column; }
     .legal-bar { flex-direction: column; gap: 12px; }
     .legal-sep { display: none; }
+    .mapel-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: repeat(2,1fr); }
+    .ptab { min-width: 0; font-size: 0.75rem; padding: 9px 10px; }
+    .tab-inner { padding: 20px 16px; }
   }
   @media (max-width: 560px) {
     .portal-grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 1.8rem; }
     .hero-arabic { font-size: 2.4rem; }
     .modal { padding: 36px 24px; }
+    .kal-item { flex-wrap: wrap; }
+    .gallery-grid { grid-template-columns: repeat(2,1fr); }
   }
 </style>
 </head>
@@ -810,17 +964,15 @@
   <section class="sec" id="portal">
     <div class="sec-eyebrow">Khusus Anggota</div>
     <div class="sec-title">Portal Orang Tua & Siswa</div>
-    <div class="sec-sub">Materi eksklusif, laporan perkembangan, rencana pelajaran, dan informasi internal — khusus untuk keluarga besar Raihanah.</div>
+    <div class="sec-sub">Akses eksklusif untuk keluarga besar Raihanah — daftar pelajaran, kalender, pengumuman, dan galeri kegiatan.</div>
 
     <!-- TERKUNCI -->
     <div id="portal-locked" class="portal-lock">
-      <div class="portal-blur portal-grid">
-        <div class="p-card"><div class="p-icon">📋</div><h3>Rencana Pelajaran</h3><p>Rencana mingguan lengkap setiap mata pelajaran.</p></div>
-        <div class="p-card"><div class="p-icon">📊</div><h3>Laporan Perkembangan</h3><p>Rekap kemajuan akademik dan hafalan ananda.</p></div>
-        <div class="p-card"><div class="p-icon">📚</div><h3>Perpustakaan Materi</h3><p>Lembar kerja dan bahan ajar digital.</p></div>
-        <div class="p-card"><div class="p-icon">💬</div><h3>Pesan & Pengumuman</h3><p>Komunikasi langsung dengan pengajar.</p></div>
-        <div class="p-card"><div class="p-icon">📅</div><h3>Kalender Kegiatan</h3><p>Jadwal ujian, libur, dan kegiatan sekolah.</p></div>
-        <div class="p-card"><div class="p-icon">🤲</div><h3>Do'a & Nasihat Harian</h3><p>Hadits dan nasihat pilihan untuk keluarga.</p></div>
+      <div class="portal-blur" style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;">
+        <div class="p-card"><div class="p-icon">📚</div><h3>Daftar Pelajaran</h3><p>Kurikulum lengkap per jenjang.</p></div>
+        <div class="p-card"><div class="p-icon">📅</div><h3>Kalender KBM</h3><p>Jadwal kegiatan belajar mengajar.</p></div>
+        <div class="p-card"><div class="p-icon">📢</div><h3>Pengumuman & Pesan</h3><p>Info terbaru dari sekolah.</p></div>
+        <div class="p-card"><div class="p-icon">🖼️</div><h3>Gallery</h3><p>Foto kegiatan sekolah.</p></div>
       </div>
       <div class="lock-screen">
         <div class="lock-ico">🔒</div>
@@ -832,22 +984,251 @@
 
     <!-- TERBUKA -->
     <div id="portal-unlocked" style="display:none;" class="fade-in">
-      <div style="background:var(--sage-ultra);border:1.5px solid var(--sage);border-radius:16px;padding:18px 26px;margin-bottom:24px;display:flex;align-items:center;gap:14px;">
-        <span style="font-size:1.6rem;">✅</span>
+
+      <!-- Welcome bar -->
+      <div style="background:var(--sage-ultra);border:1.5px solid var(--sage);border-radius:16px;padding:16px 24px;margin-bottom:28px;display:flex;align-items:center;gap:14px;">
+        <span style="font-size:1.5rem;">✅</span>
         <div>
-          <div style="font-weight:900;color:var(--sage);font-size:0.97rem;">Selamat datang kembali di Portal Raihanah!</div>
-          <div style="font-size:0.82rem;color:var(--text-muted);">Anda memiliki akses penuh ke semua materi anggota di bawah ini.</div>
+          <div style="font-weight:800;color:var(--sage);font-size:0.95rem;">Selamat datang di Portal Raihanah!</div>
+          <div style="font-size:0.8rem;color:var(--text-muted);">Anda memiliki akses penuh ke semua konten anggota.</div>
         </div>
       </div>
-      <div class="portal-grid">
-        <div class="p-card"><div class="p-icon">📋</div><h3>Rencana Pelajaran Minggu Ini</h3><p>Lihat & unduh rencana pelajaran, catatan, dan tujuan untuk setiap mapel.</p><div style="margin-top:12px;font-size:0.78rem;color:var(--sage);font-weight:800;">Lihat →</div></div>
-        <div class="p-card"><div class="p-icon">📊</div><h3>Laporan Perkembangan</h3><p>Pantau rekap akademik, hafalan Qur'an, dan pencapaian karakter ananda.</p><div style="margin-top:12px;font-size:0.78rem;color:var(--sage);font-weight:800;">Lihat →</div></div>
-        <div class="p-card"><div class="p-icon">📚</div><h3>Perpustakaan Materi</h3><p>Lembar kerja, bacaan pilihan, tautan video, dan materi cetak Islam.</p><div style="margin-top:12px;font-size:0.78rem;color:var(--sage);font-weight:800;">Buka →</div></div>
-        <div class="p-card"><div class="p-icon">💬</div><h3>Pesan & Pengumuman</h3><p>Kirim pesan ke pengajar, lihat pengumuman terbaru sekolah.</p><div style="margin-top:12px;font-size:0.78rem;color:var(--sage);font-weight:800;">Buka →</div></div>
-        <div class="p-card"><div class="p-icon">📅</div><h3>Kalender Kegiatan</h3><p>Jadwal ujian, perayaan Islam, pertemuan wali murid, dan libur.</p><div style="margin-top:12px;font-size:0.78rem;color:var(--sage);font-weight:800;">Lihat →</div></div>
-        <div class="p-card"><div class="p-icon">🤲</div><h3>Do'a & Nasihat Harian</h3><p>Do'a pilihan, hadits, dan nasihat Islam untuk keluarga minggu ini.</p><div style="margin-top:12px;font-size:0.78rem;color:var(--sage);font-weight:800;">Baca →</div></div>
+
+      <!-- TAB NAV -->
+      <div class="portal-tabs">
+        <button class="ptab active" onclick="switchTab('pelajaran', this)">📚 Daftar Pelajaran</button>
+        <button class="ptab" onclick="switchTab('kalender', this)">📅 Kalender KBM</button>
+        <button class="ptab" onclick="switchTab('pengumuman', this)">📢 Pengumuman & Pesan</button>
+        <button class="ptab" onclick="switchTab('gallery', this)">🖼️ Gallery</button>
       </div>
-    </div>
+
+      <!-- ── TAB: DAFTAR PELAJARAN ── -->
+      <div class="ptab-content active" id="tab-pelajaran">
+        <div class="tab-inner">
+          <div class="tab-section-title">Kurikulum Sekolah Raihanah</div>
+
+          <div class="mapel-grid">
+            <div class="mapel-group">
+              <div class="mapel-group-head">
+                <span>📖</span> Materi Diniyyah
+              </div>
+              <div class="mapel-list">
+                <div class="mapel-item"><span class="mapel-dot sage"></span>Aqidah</div>
+                <div class="mapel-item"><span class="mapel-dot sage"></span>Fikih</div>
+                <div class="mapel-item"><span class="mapel-dot sage"></span>Ushul Fikih</div>
+                <div class="mapel-item"><span class="mapel-dot sage"></span>Hadits</div>
+                <div class="mapel-item"><span class="mapel-dot sage"></span>Tafsir</div>
+                <div class="mapel-item"><span class="mapel-dot sage"></span>Ushul Tafsir</div>
+                <div class="mapel-item"><span class="mapel-dot sage"></span>Mustholah Hadits</div>
+                <div class="mapel-item"><span class="mapel-dot sage"></span>Qowaid Fikhiyyah</div>
+                <div class="mapel-item"><span class="mapel-dot sage"></span>Faroid</div>
+              </div>
+            </div>
+
+            <div class="mapel-group">
+              <div class="mapel-group-head">
+                <span>🗣️</span> Materi Bahasa
+              </div>
+              <div class="mapel-list">
+                <div class="mapel-item"><span class="mapel-dot gold"></span>Bahasa Arab</div>
+                <div class="mapel-item"><span class="mapel-dot gold"></span>Nahwu</div>
+                <div class="mapel-item"><span class="mapel-dot gold"></span>Sharaf</div>
+                <div class="mapel-item"><span class="mapel-dot gold"></span>Balaghoh</div>
+                <div class="mapel-item"><span class="mapel-dot gold"></span>Khat</div>
+                <div class="mapel-item"><span class="mapel-dot gold"></span>Hiwar</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="jadwal-note">
+            🕐 <strong>Waktu belajar:</strong> Senin–Kamis 08.00–Dzuhur &nbsp;·&nbsp; Jum'at 08.00–12.00 (Ekstrakulikuler)
+          </div>
+        </div>
+      </div>
+
+      <!-- ── TAB: KALENDER KBM ── -->
+      <div class="ptab-content" id="tab-kalender">
+        <div class="tab-inner">
+          <div class="tab-section-title">Kalender Kegiatan Belajar Mengajar</div>
+          <div class="tab-section-sub">Semester Genap 2024/2025</div>
+
+          <div class="kalender-list">
+            <div class="kal-item upcoming">
+              <div class="kal-date">
+                <div class="kal-day">03</div>
+                <div class="kal-mon">Feb</div>
+              </div>
+              <div class="kal-info">
+                <div class="kal-title">Awal Semester Genap</div>
+                <div class="kal-desc">Hari pertama masuk semester genap 2024/2025</div>
+              </div>
+              <div class="kal-badge green">KBM</div>
+            </div>
+            <div class="kal-item">
+              <div class="kal-date">
+                <div class="kal-day">20</div>
+                <div class="kal-mon">Feb</div>
+              </div>
+              <div class="kal-info">
+                <div class="kal-title">Pertemuan Wali Murid</div>
+                <div class="kal-desc">Evaluasi semester ganjil & diskusi program semester genap</div>
+              </div>
+              <div class="kal-badge gold">Rapat</div>
+            </div>
+            <div class="kal-item">
+              <div class="kal-date">
+                <div class="kal-day">27</div>
+                <div class="kal-mon">Feb</div>
+              </div>
+              <div class="kal-info">
+                <div class="kal-title">Ujian Tengah Semester</div>
+                <div class="kal-desc">UTS semua mata pelajaran — Senin s/d Kamis</div>
+              </div>
+              <div class="kal-badge red">Ujian</div>
+            </div>
+            <div class="kal-item">
+              <div class="kal-date">
+                <div class="kal-day">15</div>
+                <div class="kal-mon">Mar</div>
+              </div>
+              <div class="kal-info">
+                <div class="kal-title">Libur Isra Mi'raj</div>
+                <div class="kal-desc">Sekolah libur dalam rangka memperingati Isra Mi'raj Nabi Muhammad ﷺ</div>
+              </div>
+              <div class="kal-badge muted">Libur</div>
+            </div>
+            <div class="kal-item">
+              <div class="kal-date">
+                <div class="kal-day">01</div>
+                <div class="kal-mon">Apr</div>
+              </div>
+              <div class="kal-info">
+                <div class="kal-title">Libur Awal Ramadhan</div>
+                <div class="kal-desc">Libur menyambut bulan suci Ramadhan 1446H</div>
+              </div>
+              <div class="kal-badge muted">Libur</div>
+            </div>
+            <div class="kal-item">
+              <div class="kal-date">
+                <div class="kal-day">20</div>
+                <div class="kal-mon">Mei</div>
+              </div>
+              <div class="kal-info">
+                <div class="kal-title">Ujian Akhir Semester</div>
+                <div class="kal-desc">UAS semua mata pelajaran — persiapan kenaikan kelas</div>
+              </div>
+              <div class="kal-badge red">Ujian</div>
+            </div>
+          </div>
+
+          <div class="jadwal-note" style="margin-top:20px;">
+            📌 Kalender dapat berubah sewaktu-waktu. Perubahan akan diumumkan melalui tab Pengumuman.
+          </div>
+        </div>
+      </div>
+
+      <!-- ── TAB: PENGUMUMAN & PESAN ── -->
+      <div class="ptab-content" id="tab-pengumuman">
+        <div class="tab-inner">
+          <div class="tab-section-title">Pengumuman & Pesan</div>
+          <div class="tab-section-sub">Info terbaru dari Sekolah Raihanah</div>
+
+          <div class="pengumuman-list">
+            <div class="peng-card pinned">
+              <div class="peng-header">
+                <div class="peng-meta">
+                  <span class="peng-badge pin">📌 Disematkan</span>
+                  <span class="peng-date">20 Jan 2025</span>
+                </div>
+                <div class="peng-title">Kode Akses Portal Baru</div>
+              </div>
+              <div class="peng-body">
+                Assalamu'alaikum ww. Bagi seluruh orang tua & siswa, kode akses portal telah diperbarui. Silakan hubungi admin jika mengalami kendala masuk. Jazakumullahu khairan.
+              </div>
+              <div class="peng-from">— Admin Sekolah Raihanah</div>
+            </div>
+
+            <div class="peng-card">
+              <div class="peng-header">
+                <div class="peng-meta">
+                  <span class="peng-badge info">📢 Pengumuman</span>
+                  <span class="peng-date">15 Jan 2025</span>
+                </div>
+                <div class="peng-title">Jadwal Pertemuan Wali Murid — Februari 2025</div>
+              </div>
+              <div class="peng-body">
+                Kami mengundang seluruh orang tua/wali murid untuk hadir dalam pertemuan evaluasi semester ganjil pada <strong>Kamis, 20 Februari 2025</strong> pukul 09.00 WIB di lokasi sekolah. Mohon konfirmasi kehadiran ke nomor admin.
+              </div>
+              <div class="peng-from">— Ust. Muhammad Syaifullah Maslul, Lc. MA</div>
+            </div>
+
+            <div class="peng-card">
+              <div class="peng-header">
+                <div class="peng-meta">
+                  <span class="peng-badge success">✅ Info</span>
+                  <span class="peng-date">05 Jan 2025</span>
+                </div>
+                <div class="peng-title">Selamat Datang di Semester Genap 2024/2025</div>
+              </div>
+              <div class="peng-body">
+                Alhamdulillah, kita memasuki semester genap dengan semangat baru. Semoga Allah memudahkan langkah kita dalam menuntut ilmu yang bermanfaat. Barakallahu fiikum.
+              </div>
+              <div class="peng-from">— Sekolah Raihanah</div>
+            </div>
+          </div>
+
+          <div class="kontak-cepat">
+            <div class="kc-title">💬 Hubungi Kami Langsung</div>
+            <div class="kc-buttons">
+              <a href="https://wa.me/6285880699636" target="_blank" class="kc-btn wa">
+                <span>📱</span> WhatsApp Admin
+              </a>
+              <a href="mailto:raihanahyayasan@gmail.com" class="kc-btn email">
+                <span>📧</span> Email Sekolah
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── TAB: GALLERY ── -->
+      <div class="ptab-content" id="tab-gallery">
+        <div class="tab-inner">
+          <div class="tab-section-title">Gallery Kegiatan</div>
+          <div class="tab-section-sub">Dokumentasi kegiatan belajar & aktivitas Sekolah Raihanah</div>
+
+          <!-- Cara pakai Google Drive -->
+          <div class="gdrive-box">
+            <div class="gdrive-icon">📁</div>
+            <div class="gdrive-text">
+              <div class="gdrive-title">Gallery tersimpan di Google Drive</div>
+              <div class="gdrive-desc">Semua foto kegiatan sekolah tersedia di folder Google Drive kami. Klik tombol di bawah untuk melihat seluruh koleksi foto.</div>
+            </div>
+          </div>
+
+          <div style="text-align:center;margin-bottom:32px;">
+            <!-- ⚠️ GANTI LINK INI dengan link Google Drive folder gallery kamu -->
+            <a href="https://drive.google.com/drive/folders/YOUR_FOLDER_ID" target="_blank" class="btn-gdrive">
+              🖼️ Buka Gallery di Google Drive →
+            </a>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-top:10px;">Terbuka di tab baru</div>
+          </div>
+
+          <!-- Preview placeholder cards -->
+          <div class="gallery-grid">
+            <div class="gal-placeholder"><div class="gal-ph-ico">📸</div><div class="gal-ph-lbl">Kegiatan Belajar</div></div>
+            <div class="gal-placeholder"><div class="gal-ph-ico">📸</div><div class="gal-ph-lbl">Praktik Khat</div></div>
+            <div class="gal-placeholder"><div class="gal-ph-ico">📸</div><div class="gal-ph-lbl">Kunjungan Studi</div></div>
+            <div class="gal-placeholder"><div class="gal-ph-ico">📸</div><div class="gal-ph-lbl">Acara Sekolah</div></div>
+          </div>
+
+          <div class="jadwal-note" style="margin-top:20px;text-align:center;">
+            📌 Untuk menambah foto ke gallery, upload ke folder Google Drive sekolah lalu minta link ke admin.
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end portal-unlocked -->
   </section>
 
   <hr class="divider">
@@ -1047,6 +1428,13 @@
   function toggleEye() {
     const i = document.getElementById('access-code');
     i.type = i.type === 'password' ? 'text' : 'password';
+  }
+
+  function switchTab(name, btn) {
+    document.querySelectorAll('.ptab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.ptab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + name).classList.add('active');
   }
 
   // Pulihkan sesi
