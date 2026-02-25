@@ -89,8 +89,7 @@
   .rb{padding:15px 10px;border-radius:14px;border:2px solid var(--border);background:var(--off);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-size:.81rem;font-weight:700;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:7px;transition:all .22s!important;}
   .rb .ri{font-size:1.5rem;}
   .rb:hover,.rb.sel{border-color:var(--g);background:var(--g-ultra);color:var(--g);transform:translateY(-2px);}
-  #cbox{display:none;}
-  #cbox.show{display:block;animation:su .3s ease;}
+  #cbox{display:none;} #cbox.show{display:block;animation:su .3s ease;}
   @keyframes su{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
   .pw{position:relative;margin-bottom:10px;}
   .pw input{width:100%;padding:12px 44px 12px 16px;border-radius:12px;border:2px solid var(--border);font-size:.95rem;font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:3px;text-align:center;outline:none;background:var(--off);color:var(--ink);}
@@ -98,14 +97,11 @@
   .pw input.err{border-color:#e53e3e;animation:sh .3s ease;}
   @keyframes sh{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
   .eye{position:absolute;right:13px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:1rem;color:var(--muted);}
-  .etxt{font-size:.77rem;color:#e53e3e;margin-bottom:10px;display:none;}
-  .etxt.show{display:block;}
-  .gbtn{width:100%;height:44px;border-radius:12px;border:none;background:var(--g);color:#fff;font-size:.9rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;box-shadow:0 4px 16px rgba(45,122,58,.3);transition:background .2s!important;}
+  .etxt{font-size:.77rem;color:#e53e3e;margin-bottom:10px;display:none;} .etxt.show{display:block;}
+  .gbtn{width:100%;height:44px;border-radius:12px;border:none;background:var(--g);color:#fff;font-size:.9rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;box-shadow:0 4px 16px rgba(45,122,58,.3);}
   .gbtn:hover{background:var(--g-dark);}
   .skip{display:block;margin-top:14px;background:none;border:none;font-family:'Plus Jakarta Sans',sans-serif;font-size:.77rem;color:var(--muted);cursor:pointer;text-decoration:underline;text-underline-offset:3px;}
-
-  .pc{display:none;padding-top:64px;}
-  .pc.show{display:block;}
+  .pc{display:none;padding-top:64px;} .pc.show{display:block;}
   .ph{background:var(--g);padding:38px 48px 0;position:relative;overflow:hidden;}
   [data-theme=dark] .ph{background:#1a3d22;}
   .ph::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,rgba(255,255,255,.012) 0,rgba(255,255,255,.012) 1px,transparent 1px,transparent 22px);}
@@ -115,37 +111,49 @@
   .phg span{color:#8cbf9a;font-style:italic;}
   .phlo{height:32px;padding:0 14px;border-radius:999px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.25);font-family:'Plus Jakarta Sans',sans-serif;font-size:.77rem;font-weight:600;cursor:pointer;}
   .ptabs{display:flex;gap:3px;overflow-x:auto;}
-  .ptab{padding:11px 20px;background:transparent;border:none;border-radius:12px 12px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;font-weight:600;color:rgba(255,255,255,.65);cursor:pointer;white-space:nowrap;transition:all .2s!important;}
+  .ptab{padding:11px 20px;background:transparent;border:none;border-radius:12px 12px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;font-weight:600;color:rgba(255,255,255,.65);cursor:pointer;white-space:nowrap;}
   .ptab:hover{color:#fff;background:rgba(255,255,255,.1);}
   .ptab.act{background:var(--white);color:var(--g);font-weight:700;}
-  [data-theme=dark] .ptab.act{background:var(--white);}
   .pn{display:none;} .pn.act{display:block;animation:fi .3s ease;}
   @keyframes fi{from{opacity:0}to{opacity:1}}
   .pb{max-width:1100px;margin:0 auto;padding:34px 48px 80px;background:var(--white);}
-  [data-theme=dark] .pb{background:var(--white);}
   .pttl{font-family:'Instrument Serif',serif;font-size:1.5rem;font-weight:400;color:var(--ink);margin-bottom:4px;}
   .pttl em{color:var(--g);font-style:italic;}
   .psub{font-size:.81rem;color:var(--muted);margin-bottom:22px;}
-  .mgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-  .mg{background:var(--off);border-radius:16px;overflow:hidden;border:1.5px solid var(--border);}
-  .mgh{display:flex;align-items:center;gap:9px;padding:14px 16px;background:var(--g-ultra);border-bottom:1px solid var(--border);font-size:.8rem;font-weight:700;color:var(--ink);}
-  .mgb{padding:8px 16px 14px;}
-  .mi{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:.86rem;color:var(--ink-soft);}
-  .mi:last-child{border-bottom:none;}
-  .md{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
-  .md.g{background:var(--g);} .md.go{background:var(--gold-lt);}
+
+  /* Kelompok tabs inside pelajaran */
+  .kel-tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
+  .kt{padding:8px 20px;border-radius:999px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:700;color:var(--muted);transition:all .2s!important;}
+  .kt.act{background:var(--g);color:#fff;border-color:var(--g);}
+  .kpane{display:none;} .kpane.act{display:block;}
+  .mapel-table{width:100%;border-collapse:collapse;background:var(--off);border-radius:16px;overflow:hidden;border:1.5px solid var(--border);}
+  .mapel-table th{background:var(--g-ultra);padding:11px 16px;font-size:.77rem;font-weight:700;color:var(--ink);text-align:left;border-bottom:1px solid var(--border);}
+  .mapel-table td{padding:10px 16px;font-size:.84rem;color:var(--ink-soft);border-bottom:1px solid var(--border);vertical-align:top;}
+  .mapel-table tr:last-child td{border-bottom:none;}
+  .mapel-table tr:hover td{background:var(--g-ultra);}
+  .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:7px;vertical-align:middle;}
+  .dot.g{background:var(--g);} .dot.go{background:var(--gold-lt);} .dot.b{background:#3b5bdb;}
   .jnote{background:var(--g-ultra);border:1px solid var(--g-pale);border-radius:12px;padding:13px 16px;font-size:.82rem;color:var(--ink-soft);line-height:1.7;margin-top:18px;}
+
+  /* Kalender */
   .klist{display:flex;flex-direction:column;gap:10px;}
   .kr{display:flex;align-items:center;gap:16px;background:var(--off);border-radius:13px;padding:14px 18px;border:1px solid var(--border);}
   .kr:hover,.kr.hot{border-color:var(--g-pale);background:var(--g-ultra);}
-  .kdt{text-align:center;min-width:40px;flex-shrink:0;}
+  .kr.libur{border-color:rgba(138,109,30,.2);background:var(--gold-pl);}
+  .kr.ujian{border-color:rgba(192,57,43,.15);background:#fef5f5;}
+  .kdt{text-align:center;min-width:44px;flex-shrink:0;}
   .kd{font-size:1.4rem;font-weight:900;color:var(--g);line-height:1;}
+  .kr.libur .kd{color:var(--gold);}
+  .kr.ujian .kd{color:#c0392b;}
   .km{font-size:.62rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;}
-  .ki{flex:1;} .kt{font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:2px;}
+  .ki{flex:1;} .kt2{font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:2px;}
   .kdsc{font-size:.77rem;color:var(--muted);line-height:1.5;}
   .kb{font-size:.67rem;font-weight:700;padding:4px 11px;border-radius:999px;white-space:nowrap;flex-shrink:0;}
   .kb.g{background:var(--g-pale);color:var(--g);} .kb.go{background:var(--gold-pl);color:var(--gold);}
   .kb.r{background:#fde8e8;color:#c0392b;} .kb.mu{background:var(--off);color:var(--muted);border:1px solid var(--border);}
+  .kb.b{background:#e8f0fe;color:#3b5bdb;}
+
+  /* Pengumuman & Gallery */
   .plist{display:flex;flex-direction:column;gap:11px;margin-bottom:22px;}
   .pcard{border-radius:13px;padding:18px 20px;border:1px solid var(--border);background:var(--off);}
   .pcard.pin{border-color:var(--g-pale);background:var(--g-ultra);}
@@ -160,10 +168,8 @@
   .kqt{font-size:.85rem;font-weight:700;color:var(--ink);margin-bottom:11px;}
   .kqb{display:flex;gap:9px;flex-wrap:wrap;}
   .kqbtn{display:inline-flex;align-items:center;gap:7px;padding:9px 17px;border-radius:999px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.81rem;font-weight:700;text-decoration:none;transition:all .22s!important;}
-  .kqwa{background:#25d366;color:#fff;box-shadow:0 3px 12px rgba(37,211,102,.28);}
-  .kqwa:hover{background:#1ebe5d;transform:translateY(-1px);}
-  .kqem{background:var(--white);color:var(--g);border:1.5px solid var(--border);}
-  .kqem:hover{background:var(--g-ultra);}
+  .kqwa{background:#25d366;color:#fff;} .kqwa:hover{background:#1ebe5d;transform:translateY(-1px);}
+  .kqem{background:var(--white);color:var(--g);border:1.5px solid var(--border);} .kqem:hover{background:var(--g-ultra);}
   .gbanner{display:flex;align-items:center;gap:16px;background:var(--g-ultra);border:1.5px solid var(--g-pale);border-radius:16px;padding:22px 24px;margin-bottom:22px;}
   .gbico{font-size:2.2rem;flex-shrink:0;}
   .gbttl{font-size:.93rem;font-weight:700;color:var(--ink);margin-bottom:3px;}
@@ -174,7 +180,7 @@
   .gph{aspect-ratio:1;background:var(--off);border-radius:13px;border:1.5px dashed var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;}
   .gph:hover{border-color:var(--g-pale);background:var(--g-ultra);}
   .gphi{font-size:1.5rem;opacity:.4;} .gphl{font-size:.7rem;color:var(--muted);font-weight:600;text-align:center;}
-  @media(max-width:768px){.ph{padding:30px 20px 0;}.pb{padding:22px 20px 60px;}.ptabs{padding-bottom:2px;}.ptab{font-size:.75rem;padding:9px 13px;}.mgrid{grid-template-columns:1fr;}.ggrid{grid-template-columns:repeat(2,1fr);}.kr{flex-wrap:wrap;gap:9px;}.gc{padding:36px 22px;}}
+  @media(max-width:768px){.ph{padding:30px 20px 0;}.pb{padding:22px 20px 60px;}.ptabs{padding-bottom:2px;}.ptab{font-size:.75rem;padding:9px 13px;}.ggrid{grid-template-columns:repeat(2,1fr);}.gc{padding:36px 22px;}.kr{flex-wrap:wrap;gap:8px;}}
 
 </style>
 </head><body><nav id="nav">
@@ -225,49 +231,129 @@
     </div>
   </div>
 
+  <!-- PELAJARAN -->
   <div id="tp-pl" class="pn act"><div class="pb">
-    <h2 class="pttl">Daftar <em>Pelajaran</em></h2><p class="psub">Dua pilar utama pembelajaran Sekolah Raihanah.</p>
-    <div class="mgrid">
-      <div class="mg"><div class="mgh"><span>📖</span>Materi Diniyyah</div><div class="mgb"><div class="mi"><span class="md g"></span>Aqidah</div><div class="mi"><span class="md g"></span>Fikih</div><div class="mi"><span class="md g"></span>Ushul Fikih</div><div class="mi"><span class="md g"></span>Hadits</div><div class="mi"><span class="md g"></span>Tafsir</div><div class="mi"><span class="md g"></span>Ushul Tafsir</div><div class="mi"><span class="md g"></span>Mustholah Hadits</div><div class="mi"><span class="md g"></span>Qowaid Fikhiyyah</div><div class="mi"><span class="md g"></span>Faroid</div></div></div>
-      <div class="mg"><div class="mgh"><span>🗣️</span>Materi Bahasa Arab</div><div class="mgb"><div class="mi"><span class="md go"></span>Bahasa Arab</div><div class="mi"><span class="md go"></span>Nahwu</div><div class="mi"><span class="md go"></span>Sharaf</div><div class="mi"><span class="md go"></span>Balaghoh</div><div class="mi"><span class="md go"></span>Khat</div><div class="mi"><span class="md go"></span>Hiwar</div></div></div>
+    <h2 class="pttl">Daftar <em>Pelajaran</em></h2>
+    <p class="psub">Semester Genap 2025–2026 M · Pilih kelompok untuk melihat silabus</p>
+    <div class="kel-tabs">
+      <button class="kt act" onclick="switchKel('k1',this)">📗 Kelompok 1</button>
+      <button class="kt" onclick="switchKel('k2',this)">📘 Kelompok 2</button>
+      <button class="kt" onclick="switchKel('k3',this)">📙 Kelompok 3</button>
     </div>
-    <div class="jnote">🕐 <strong>Jadwal:</strong> Senin–Kamis 08.00–Dzuhur · Jum'at 08.00–12.00 (Ekskul)</div>
+
+    <div class="kpane act" id="kp-k1">
+      <table class="mapel-table">
+        <thead><tr><th>No</th><th>Pelajaran</th><th>Buku Pegangan</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="dot b"></span>Tahfidz Al-Qur'an</td><td>Al-Qur'an</td></tr>
+          <tr><td>2</td><td><span class="dot g"></span>Hadits</td><td>At-Tuhfah ar-Rabbaniyyah Syarah Arbain Nawawiyyah</td></tr>
+          <tr><td>3</td><td><span class="dot g"></span>Mustholah Hadits</td><td>Mandzumah al-Baiquniyyah</td></tr>
+          <tr><td>4</td><td><span class="dot g"></span>Ushul Tafsir</td><td>Husnut Tahrir 'ala Ushul fit Tafsir – Syaikh 'Utsaimin</td></tr>
+          <tr><td>5</td><td><span class="dot g"></span>Aqidah</td><td>Syarah Ushul Tsalatsah – Syaikh 'Utsaimin</td></tr>
+          <tr><td>6</td><td><span class="dot g"></span>Fiqih</td><td>Fikih Muyassar</td></tr>
+          <tr><td>7</td><td><span class="dot g"></span>Ushul Fiqih</td><td>Al-Ushul min Ilmil Ushul – Syaikh 'Utsaimin</td></tr>
+          <tr><td>8</td><td><span class="dot g"></span>Faroidh</td><td>Al-Faroidh al-Muyassar – Abdussyakur Muallim Abdu Faarih</td></tr>
+          <tr><td>9</td><td><span class="dot go"></span>Bahasa Arab</td><td>Durusul Lughoh Gontor Jilid 2</td></tr>
+          <tr><td>10</td><td><span class="dot go"></span>Sharaf</td><td>Tashrif Dasar – Daud Abu Umar</td></tr>
+          <tr><td>11</td><td><span class="dot go"></span>Nahwu</td><td>An-Nahwu al-Wadhih 2 – Ali Jarim & Musthafa Amin</td></tr>
+          <tr><td>12</td><td><span class="dot go"></span>Balaghoh</td><td>Al-Balaghoh al-Muyassaroh – DR. Abdul Aziz bin Ali al-Harbiy</td></tr>
+          <tr><td>13</td><td><span class="dot go"></span>Adab & Akhlak</td><td>Hilyah Thalibil Ilmi – Syaikh Bakr Abdullah Abu Zaid</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="kpane" id="kp-k2">
+      <table class="mapel-table">
+        <thead><tr><th>No</th><th>Pelajaran</th><th>Buku Pegangan</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="dot b"></span>Tahfidz Al-Qur'an</td><td>Al-Qur'an</td></tr>
+          <tr><td>2</td><td><span class="dot g"></span>Hadits</td><td>At-Tuhfah ar-Rabbaniyyah Syarah Arbain Nawawiyyah</td></tr>
+          <tr><td>3</td><td><span class="dot g"></span>Mustholah Hadits</td><td>Hafalan Mandzumah al-Baiquniyyah</td></tr>
+          <tr><td>4</td><td><span class="dot g"></span>Aqidah</td><td>Muqorror Tauhid – DR. Abdul Aziz Al Abdul Lathif</td></tr>
+          <tr><td>5</td><td><span class="dot g"></span>Fiqih</td><td>Fikih Muyassar</td></tr>
+          <tr><td>6</td><td><span class="dot g"></span>Siroh Nabawiyyah</td><td>Khulashoh Nurul Yaqin 2 – Umar Abdul Jabbar</td></tr>
+          <tr><td>7</td><td><span class="dot go"></span>Bahasa Arab</td><td>Durusul Lughoh Gontor Jilid 2</td></tr>
+          <tr><td>8</td><td><span class="dot go"></span>Hiwar</td><td>Al-Muhawaroh al-Yaumiyyah</td></tr>
+          <tr><td>9</td><td><span class="dot go"></span>Sharaf</td><td>Tashrif Dasar – Daud Abu Umar</td></tr>
+          <tr><td>10</td><td><span class="dot go"></span>Nahwu</td><td>An-Nahwu al-Wadhih 2 – Ali Jarim & Musthafa Amin</td></tr>
+          <tr><td>11</td><td><span class="dot go"></span>Adab & Akhlak</td><td>Hilyah Thalibil Ilmi – Syaikh Bakr Abdullah Abu Zaid</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="kpane" id="kp-k3">
+      <table class="mapel-table">
+        <thead><tr><th>No</th><th>Pelajaran</th><th>Buku Pegangan</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="dot b"></span>Tahfidz Al-Qur'an</td><td>Al-Qur'an</td></tr>
+          <tr><td>2</td><td><span class="dot g"></span>Hadits</td><td>Hafalan Hadits Arbain Nawawiyyah</td></tr>
+          <tr><td>3</td><td><span class="dot g"></span>Dzikir & Do'a</td><td>Dzikir Pagi & Petang</td></tr>
+          <tr><td>4</td><td><span class="dot g"></span>Aqidah</td><td>Muqorror Tauhid – DR. Abdul Aziz Al Abdul Lathif</td></tr>
+          <tr><td>5</td><td><span class="dot g"></span>Fiqih</td><td>Bidayatul Mutafaqqih (Bab pilihan) – Syaikh Wahid Abdus Salam Baali</td></tr>
+          <tr><td>6</td><td><span class="dot g"></span>Siroh Nabawiyyah</td><td>Khulashoh Nurul Yaqin 1 – Umar Abdul Jabbar</td></tr>
+          <tr><td>7</td><td><span class="dot go"></span>Bahasa Arab</td><td>Durusul Lughoh Gontor Jilid 1</td></tr>
+          <tr><td>8</td><td><span class="dot go"></span>Hiwar</td><td>Al-Muhawaroh al-Yaumiyyah</td></tr>
+          <tr><td>9</td><td><span class="dot go"></span>Khat</td><td>Khat Praktis</td></tr>
+          <tr><td>10</td><td><span class="dot go"></span>Imla'</td><td>Pengantar Ilmu Imla'</td></tr>
+          <tr><td>11</td><td><span class="dot go"></span>Sharaf</td><td>Tashrif Lughawi</td></tr>
+          <tr><td>12</td><td><span class="dot go"></span>Adab & Akhlak</td><td>Hilyah Thalibil Ilmi – Syaikh Bakr Abdullah Abu Zaid</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="jnote" style="margin-top:18px;">
+      🕐 <strong>Jadwal KBM:</strong> Senin–Kamis 08.00–12.00 &nbsp;·&nbsp; Jum'at: Ekstrakulikuler &nbsp;·&nbsp;
+      📡 <strong>Ba'da Maghrib:</strong> Pelajaran tambahan secara daring &nbsp;·&nbsp;
+      🔵 = Al-Qur'an &nbsp; 🟢 = Diniyyah &nbsp; 🟡 = Bahasa Arab
+    </div>
   </div></div>
 
+  <!-- KALENDER — dari Kaldik resmi -->
   <div id="tp-kal" class="pn"><div class="pb">
-    <h2 class="pttl">Kalender <em>KBM</em></h2><p class="psub">Semester Genap 2024/2025</p>
+    <h2 class="pttl">Kalender <em>KBM</em></h2>
+    <p class="psub">Semester Genap 2025–2026 M · Sumber: Kaldik Resmi Sekolah Raihanah</p>
     <div class="klist">
-      <div class="kr hot"><div class="kdt"><div class="kd">03</div><div class="km">Feb</div></div><div class="ki"><div class="kt">Awal Semester Genap</div><div class="kdsc">Hari pertama masuk semester genap 2024/2025</div></div><div class="kb g">KBM</div></div>
-      <div class="kr"><div class="kdt"><div class="kd">20</div><div class="km">Feb</div></div><div class="ki"><div class="kt">Pertemuan Wali Murid</div><div class="kdsc">Evaluasi semester ganjil & diskusi program baru</div></div><div class="kb go">Rapat</div></div>
-      <div class="kr"><div class="kdt"><div class="kd">27</div><div class="km">Feb</div></div><div class="ki"><div class="kt">Ujian Tengah Semester</div><div class="kdsc">UTS semua mata pelajaran — Senin s/d Kamis</div></div><div class="kb r">Ujian</div></div>
-      <div class="kr"><div class="kdt"><div class="kd">15</div><div class="km">Mar</div></div><div class="ki"><div class="kt">Libur Isra Mi'raj</div><div class="kdsc">Memperingati Isra Mi'raj Nabi Muhammad ﷺ</div></div><div class="kb mu">Libur</div></div>
-      <div class="kr"><div class="kdt"><div class="kd">01</div><div class="km">Apr</div></div><div class="ki"><div class="kt">Libur Awal Ramadhan</div><div class="kdsc">Menyambut bulan suci Ramadhan 1446H</div></div><div class="kb mu">Libur</div></div>
-      <div class="kr"><div class="kdt"><div class="kd">20</div><div class="km">Mei</div></div><div class="ki"><div class="kt">Ujian Akhir Semester</div><div class="kdsc">UAS semua mata pelajaran</div></div><div class="kb r">Ujian</div></div>
+      <div class="kr hot"><div class="kdt"><div class="kd">12</div><div class="km">Jan</div></div><div class="ki"><div class="kt2">Hari Pertama Masuk Sekolah</div><div class="kdsc">Awal semester genap T.P 2025-2026</div></div><div class="kb g">KBM</div></div>
+      <div class="kr libur"><div class="kdt"><div class="kd">1</div><div class="km">Jan</div></div><div class="ki"><div class="kt2">Libur Nasional</div><div class="kdsc">Tahun Baru Masehi 2026</div></div><div class="kb go">Libur</div></div>
+      <div class="kr libur"><div class="kdt"><div class="kd">16</div><div class="km">Jan</div></div><div class="ki"><div class="kt2">Libur Nasional</div><div class="kdsc">—</div></div><div class="kb go">Libur</div></div>
+      <div class="kr libur"><div class="kdt"><div class="kd">17</div><div class="km">Feb</div></div><div class="ki"><div class="kt2">Libur Nasional</div><div class="kdsc">—</div></div><div class="kb go">Libur</div></div>
+      <div class="kr libur"><div class="kdt"><div class="kd">18–22</div><div class="km">Feb</div></div><div class="ki"><div class="kt2">Libur Awal Ramadhan 1448 H</div><div class="kdsc">Menyambut bulan suci Ramadhan</div></div><div class="kb go">Libur</div></div>
+      <div class="kr ujian"><div class="kdt"><div class="kd">23 Feb –<br>6 Mar</div><div class="km"></div></div><div class="ki"><div class="kt2">Prakiraan Ujian Tengah Semester Genap</div><div class="kdsc">UTS T.P 2025-2026</div></div><div class="kb r">Ujian</div></div>
+      <div class="kr libur"><div class="kdt"><div class="kd">21</div><div class="km">Mar</div></div><div class="ki"><div class="kt2">Prakiraan Idul Fitri 1448 H</div><div class="kdsc">—</div></div><div class="kb go">Libur</div></div>
+      <div class="kr libur"><div class="kdt"><div class="kd">9–27</div><div class="km">Mar</div></div><div class="ki"><div class="kt2">Prakiraan Libur Idul Fitri 1448 H</div><div class="kdsc">Libur Lebaran</div></div><div class="kb go">Libur</div></div>
+      <div class="kr"><div class="kdt"><div class="kd">6–16</div><div class="km">Apr</div></div><div class="ki"><div class="kt2">Prakiraan TKA SMP Paket B</div><div class="kdsc">Tes Kemampuan Akademik SMP 2025-2026</div></div><div class="kb b">TKA</div></div>
+      <div class="kr libur"><div class="kdt"><div class="kd">3</div><div class="km">Apr</div></div><div class="ki"><div class="kt2">Libur Nasional</div><div class="kdsc">—</div></div><div class="kb go">Libur</div></div>
+      <div class="kr libur"><div class="kdt"><div class="kd">1</div><div class="km">Mei</div></div><div class="ki"><div class="kt2">Libur Nasional</div><div class="kdsc">Hari Buruh</div></div><div class="kb go">Libur</div></div>
+      <div class="kr libur"><div class="kdt"><div class="kd">26–27</div><div class="km">Mei</div></div><div class="ki"><div class="kt2">Prakiraan Idul Adha 1448 H</div><div class="kdsc">—</div></div><div class="kb go">Libur</div></div>
+      <div class="kr libur"><div class="kdt"><div class="kd">1</div><div class="km">Jun</div></div><div class="ki"><div class="kt2">Libur Nasional</div><div class="kdsc">Hari Lahir Pancasila</div></div><div class="kb go">Libur</div></div>
+      <div class="kr ujian"><div class="kdt"><div class="kd">15–26</div><div class="km">Jun</div></div><div class="ki"><div class="kt2">Prakiraan Ujian Akhir Semester Genap</div><div class="kdsc">UAS T.P 2025-2026</div></div><div class="kb r">Ujian</div></div>
+      <div class="kr libur"><div class="kdt"><div class="kd">29 Jun–<br>10 Jul</div><div class="km"></div></div><div class="ki"><div class="kt2">Libur Akhir Tahun Pelajaran</div><div class="kdsc">Kenaikan kelas</div></div><div class="kb mu">Libur</div></div>
     </div>
-    <div class="jnote" style="margin-top:14px;">📌 Perubahan jadwal diumumkan melalui tab Pengumuman.</div>
+    <div class="jnote" style="margin-top:14px;">📌 Jadwal dapat berubah sesuai kondisi. Perubahan diumumkan melalui tab Pengumuman.</div>
   </div></div>
 
+  <!-- PENGUMUMAN -->
   <div id="tp-peng" class="pn"><div class="pb">
     <h2 class="pttl">Pengumuman <em>& Pesan</em></h2><p class="psub">Info terbaru dari Sekolah Raihanah.</p>
     <div class="plist">
-      <div class="pcard pin"><div class="pmeta"><span class="pbg p">📌 Disematkan</span><span class="pdt">20 Jan 2025</span></div><div class="ptt">Kode Akses Portal Baru</div><div class="pbdy">Assalamu'alaikum ww. Kode akses portal telah diperbarui. Hubungi admin jika ada kendala.</div><div class="pfr">— Admin Sekolah Raihanah</div></div>
-      <div class="pcard"><div class="pmeta"><span class="pbg i">📢 Pengumuman</span><span class="pdt">15 Jan 2025</span></div><div class="ptt">Jadwal Pertemuan Wali Murid — Februari 2025</div><div class="pbdy">Kami mengundang seluruh wali murid hadir pada <strong>Kamis, 20 Februari 2025</strong> pukul 09.00 WIB. Mohon konfirmasi ke admin.</div><div class="pfr">— Ust. Muhammad Syaifullah Maslul, Lc. MA</div></div>
-      <div class="pcard"><div class="pmeta"><span class="pbg o">✅ Info</span><span class="pdt">05 Jan 2025</span></div><div class="ptt">Selamat Datang di Semester Genap 2024/2025</div><div class="pbdy">Alhamdulillah, kita memasuki semester genap dengan semangat baru. Barakallahu fiikum.</div><div class="pfr">— Sekolah Raihanah</div></div>
+      <div class="pcard pin"><div class="pmeta"><span class="pbg p">📌 Disematkan</span><span class="pdt">Jan 2026</span></div><div class="ptt">Kode Akses Portal</div><div class="pbdy">Assalamu'alaikum ww. Kode akses portal anggota: <strong>Raihanah2024</strong>. Hubungi admin jika ada kendala.</div><div class="pfr">— Admin Sekolah Raihanah</div></div>
+      <div class="pcard"><div class="pmeta"><span class="pbg i">📢 Pengumuman</span><span class="pdt">12 Jan 2026</span></div><div class="ptt">Selamat Datang di Semester Genap 2025–2026!</div><div class="pbdy">Alhamdulillah, KBM semester genap resmi dimulai. Semoga Allah memudahkan kita semua dalam menuntut ilmu yang bermanfaat. Barakallahu fiikum.</div><div class="pfr">— Ust. Syaifullah Maslul, Lc., MA</div></div>
     </div>
     <div class="kq"><div class="kqt">💬 Hubungi Kami Langsung</div><div class="kqb"><a href="https://wa.me/6285880699636" target="_blank" class="kqbtn kqwa">📱 WhatsApp Admin</a><a href="mailto:raihanahyayasan@gmail.com" class="kqbtn kqem">📧 Email Sekolah</a></div></div>
   </div></div>
 
+  <!-- GALLERY -->
   <div id="tp-gal" class="pn"><div class="pb">
     <h2 class="pttl">Gallery <em>Kegiatan</em></h2><p class="psub">Dokumentasi kegiatan belajar Sekolah Raihanah.</p>
-    <div class="gbanner"><div class="gbico">📁</div><div><div class="gbttl">Gallery tersimpan di Google Drive</div><div class="gbdsc">Semua foto kegiatan tersedia di folder Google Drive. Klik tombol di bawah untuk melihat.</div></div></div>
+    <div class="gbanner"><div class="gbico">📁</div><div><div class="gbttl">Gallery tersimpan di Google Drive</div><div class="gbdsc">Semua foto kegiatan tersedia di folder Google Drive sekolah.</div></div></div>
     <div style="text-align:center;">
-      <a href="https://drive.google.com/drive/folders/YOUR_FOLDER_ID" target="_blank" class="dbtn">🖼️ Buka Gallery di Google Drive →</a>
+      <a href="https://drive.google.com/drive/folders/1GFh7HVRaNwdWr-HGYvZpRTYopD4vmWJJ?usp=sharing" target="_blank" class="dbtn">🖼️ Buka Gallery di Google Drive →</a>
       <div style="font-size:.72rem;color:var(--muted);margin-top:8px;">Ganti link dengan folder Google Drive sekolah</div>
     </div>
     <div class="ggrid">
       <div class="gph"><div class="gphi">📸</div><div class="gphl">Kegiatan Belajar</div></div>
-      <div class="gph"><div class="gphi">📸</div><div class="gphl">Praktik Khat</div></div>
-      <div class="gph"><div class="gphi">📸</div><div class="gphl">Kunjungan Studi</div></div>
+      <div class="gph"><div class="gphi">📸</div><div class="gphl">Tahfidz & Tahsin</div></div>
+      <div class="gph"><div class="gphi">📸</div><div class="gphl">Ekstrakulikuler</div></div>
       <div class="gph"><div class="gphi">📸</div><div class="gphl">Acara Sekolah</div></div>
     </div>
   </div></div>
@@ -284,13 +370,14 @@
   </div>
 </div></footer>
 <script>
-var CODE='Botanicai1';
+var CODE='Raihanah2024';
 function pickRole(r,btn){document.querySelectorAll('.rb').forEach(function(b){b.classList.remove('sel');});btn.classList.add('sel');var cb=document.getElementById('cbox');if(r==='member'){cb.classList.add('show');setTimeout(function(){document.getElementById('pw').focus();},150);}else{cb.classList.remove('show');}}
 function doLogin(){var pw=document.getElementById('pw');if(pw.value.trim()===CODE){unlock();}else{pw.classList.add('err');document.getElementById('etxt').classList.add('show');setTimeout(function(){pw.classList.remove('err');},400);}}
 function unlock(){document.getElementById('gate').style.display='none';var pc=document.getElementById('pc');pc.style.display='block';pc.classList.add('show');sessionStorage.setItem('sr_p','member');}
 function enterVisitor(){document.getElementById('gate').style.display='none';var pc=document.getElementById('pc');pc.style.display='block';pc.classList.add('show');sessionStorage.setItem('sr_p','visitor');}
 function doLogout(){sessionStorage.removeItem('sr_p');location.reload();}
 function switchTab(name,btn){document.querySelectorAll('.ptab').forEach(function(b){b.classList.remove('act');});document.querySelectorAll('.pn').forEach(function(p){p.classList.remove('act');});btn.classList.add('act');document.getElementById('tp-'+name).classList.add('act');}
+function switchKel(name,btn){document.querySelectorAll('.kt').forEach(function(b){b.classList.remove('act');});document.querySelectorAll('.kpane').forEach(function(p){p.classList.remove('act');});btn.classList.add('act');document.getElementById('kp-'+name).classList.add('act');}
 window.addEventListener('load',function(){var s=sessionStorage.getItem('sr_p');if(s){document.getElementById('gate').style.display='none';var pc=document.getElementById('pc');pc.style.display='block';pc.classList.add('show');}});
 </script>
 

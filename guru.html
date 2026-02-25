@@ -86,8 +86,6 @@
   .gttl{font-family:'Instrument Serif',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:400;color:#fff;line-height:1.1;letter-spacing:-.02em;margin-bottom:12px;}
   .gttl em{color:#6db87e;font-style:italic;}
   .gdsc{font-size:.95rem;color:rgba(255,255,255,.6);line-height:1.85;max-width:500px;}
-
-  /* JADWAL */
   .s-j{background:var(--cream);padding:80px 48px;}
   .ji{max-width:1100px;margin:0 auto;}
   .sh2{font-family:'Instrument Serif',serif;font-size:1.8rem;font-weight:400;color:var(--ink);margin-bottom:6px;letter-spacing:-.01em;}
@@ -97,25 +95,19 @@
   .jt{width:100%;border-collapse:collapse;}
   .jt thead tr{background:linear-gradient(135deg,#2d7a3a,#3d9a4f);}
   .jt th{color:#fff;padding:14px 18px;font-size:.79rem;font-weight:700;text-align:left;letter-spacing:.04em;}
-  .jt td{padding:13px 18px;font-size:.86rem;color:var(--ink-soft);border-bottom:1px solid var(--border);}
+  .jt td{padding:13px 18px;font-size:.86rem;color:var(--ink-soft);border-bottom:1px solid var(--border);vertical-align:top;}
   .jt tbody tr:last-child td{border-bottom:none;}
   .jt tbody tr:hover td{background:var(--g-ultra);}
-  .jbg{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:8px;font-size:.72rem;font-weight:700;}
-  .jbg.g{background:var(--g-pale);color:var(--g);} .jbg.go{background:var(--gold-pl);color:var(--gold);}
   .chips{display:flex;gap:5px;flex-wrap:wrap;}
   .chip{background:var(--off);border:1px solid var(--border);color:var(--ink-soft);font-size:.71rem;font-weight:500;padding:3px 9px;border-radius:6px;}
-
-  /* LOGIN SECTION */
   .s-login{background:var(--white);padding:80px 48px;}
   .li{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
   .ll h2{font-family:'Instrument Serif',serif;font-size:1.9rem;font-weight:400;color:var(--ink);margin-bottom:10px;letter-spacing:-.01em;}
   .ll h2 em{color:var(--g);font-style:italic;}
   .ll p{font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:24px;}
   .lfeats{display:flex;flex-direction:column;gap:11px;}
-  .lf{display:flex;align-items:center;gap:12px;font-size:.87rem;color:var(--ink-soft);}
+  .lf2{display:flex;align-items:center;gap:12px;font-size:.87rem;color:var(--ink-soft);}
   .lfic{width:34px;height:34px;border-radius:10px;background:var(--g-ultra);border:1px solid var(--g-pale);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;}
-
-  /* Login form & panel */
   .lcard{background:var(--off);border-radius:22px;padding:32px;border:1.5px solid var(--border);box-shadow:0 2px 0 var(--border),0 16px 48px rgba(15,29,19,.07);}
   .lcttl{font-size:.97rem;font-weight:700;color:var(--ink);margin-bottom:4px;}
   .lcsub{font-size:.77rem;color:var(--muted);margin-bottom:22px;}
@@ -124,55 +116,50 @@
   .lfinp{width:100%;padding:11px 14px;border-radius:11px;border:1.5px solid var(--border);background:var(--white);font-size:.9rem;font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);outline:none;}
   .lfinp:focus{border-color:var(--g);}
   .lf-pw{position:relative;}
-  .lf-pw input{padding-right:42px;}
+  .lf-pw .lfinp{padding-right:42px;}
   .lf-eye{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:.95rem;color:var(--muted);}
   .lerr{font-size:.77rem;color:#e53e3e;margin-bottom:10px;display:none;}
   .lerr.show{display:block;}
-  .lbtn{width:100%;height:44px;border-radius:11px;border:none;background:var(--g);color:#fff;font-size:.88rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;box-shadow:0 3px 12px rgba(45,122,58,.28);transition:background .2s!important;}
+  .lbtn{width:100%;height:44px;border-radius:11px;border:none;background:var(--g);color:#fff;font-size:.88rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;box-shadow:0 3px 12px rgba(45,122,58,.28);}
   .lbtn:hover{background:var(--g-dark);}
   .lhelp{margin-top:12px;font-size:.74rem;color:var(--muted);text-align:center;}
   .lhelp a{color:var(--g);}
-
-  /* Panel after login */
   #gpanel{display:none;}
-  #gpanel.show{display:block;}
   .pwelcome{display:flex;align-items:center;gap:14px;background:var(--g-ultra);border:1.5px solid var(--g-pale);border-radius:14px;padding:16px 18px;margin-bottom:20px;flex-wrap:wrap;}
-  .pwicon{font-size:2rem;}
-  .pwname{font-weight:800;color:var(--g);font-size:.95rem;}
-  .pwrole{font-size:.77rem;color:var(--muted);margin-top:2px;}
+  .pwicon{font-size:2rem;} .pwname{font-weight:800;color:var(--g);font-size:.95rem;}
+  .pwsub{font-size:.75rem;color:var(--muted);margin-top:2px;}
   .plo{margin-left:auto;height:30px;padding:0 13px;border-radius:999px;background:none;border:1.5px solid var(--border);font-family:'Plus Jakarta Sans',sans-serif;font-size:.74rem;font-weight:600;color:var(--muted);cursor:pointer;}
   .gtabs{display:flex;gap:7px;margin-bottom:16px;flex-wrap:wrap;}
-  .gtab{padding:8px 16px;border-radius:999px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-size:.79rem;font-weight:700;color:var(--muted);transition:all .2s!important;}
+  .gtab{padding:8px 16px;border-radius:999px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-size:.79rem;font-weight:700;color:var(--muted);}
   .gtab.act{background:var(--g);color:#fff;border-color:var(--g);}
-  .gpn{display:none;} .gpn.act{display:block;animation:fi .3s ease;}
-  @keyframes fi{from{opacity:0}to{opacity:1}}
+  .gpn{display:none;} .gpn.act{display:block;}
   .finp{width:100%;padding:11px 14px;border-radius:11px;border:1.5px solid var(--border);background:var(--white);font-size:.88rem;font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);outline:none;margin-bottom:10px;}
   .finp:focus{border-color:var(--g);}
   textarea.finp{min-height:110px;resize:vertical;}
-  .fbtn{height:40px;padding:0 20px;border-radius:999px;border:none;background:var(--g);color:#fff;font-size:.82rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;box-shadow:0 3px 12px rgba(45,122,58,.28);transition:background .2s!important;}
+  .fbtn{height:40px;padding:0 20px;border-radius:999px;border:none;background:var(--g);color:#fff;font-size:.82rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;}
   .fbtn:hover{background:var(--g-dark);}
   .suc{display:none;background:var(--g-ultra);border:1px solid var(--g-pale);border-radius:10px;padding:11px 15px;font-size:.82rem;color:var(--g);font-weight:600;margin-top:9px;}
   .suc.show{display:block;}
-
-  /* KONTAK GURU */
   .s-kg{background:var(--off);padding:80px 48px;border-top:1px solid var(--border);}
   .kgi{max-width:1100px;margin:0 auto;}
-  .kggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px;}
-  .kgc{background:var(--white);border-radius:18px;padding:24px;border:1px solid var(--border);transition:all .22s!important;}
+  .kggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px;}
+  .kgc{background:var(--white);border-radius:18px;padding:22px;border:1px solid var(--border);transition:all .22s!important;}
   .kgc:hover{border-color:var(--g-pale);box-shadow:0 8px 28px rgba(45,122,58,.07);transform:translateY(-2px);}
-  .kgico{font-size:1.5rem;margin-bottom:11px;}
-  .kgname{font-size:.93rem;font-weight:700;color:var(--ink);margin-bottom:2px;}
-  .kgrole{font-size:.71rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:9px;}
+  .kgico{font-size:1.4rem;margin-bottom:10px;}
+  .kgname{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:2px;}
+  .kgrole{font-size:.69rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;}
   .kgcon{display:flex;flex-direction:column;gap:5px;}
-  .kgci{display:flex;align-items:center;gap:7px;font-size:.81rem;color:var(--ink-soft);}
-  .kgci a{color:var(--g);} .kgci a:hover{text-decoration:underline;}
-
+  .kgci{display:flex;align-items:flex-start;gap:6px;font-size:.78rem;color:var(--ink-soft);line-height:1.5;}
+  .kgci a{color:var(--g);}
+  .sl{display:inline-flex;align-items:center;gap:8px;font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--g);margin-bottom:12px;}
+  .sl::before{content:'';width:20px;height:1.5px;background:var(--g-pale);display:block;}
   @media(max-width:900px){
-    .ghero{padding:56px 24px 60px;} .s-j,.s-login,.s-kg{padding:56px 24px;}
+    .ghero{padding:56px 24px 60px;}.s-j,.s-login,.s-kg{padding:56px 24px;}
     .li{grid-template-columns:1fr;gap:32px;}
-    .kggrid{grid-template-columns:1fr;}
-    .jtw{overflow-x:auto;} .jt{min-width:560px;}
+    .kggrid{grid-template-columns:repeat(2,1fr);}
+    .jtw{overflow-x:auto;}.jt{min-width:680px;}
   }
+  @media(max-width:540px){.kggrid{grid-template-columns:1fr;}}
 
 </style>
 </head><body><nav id="nav">
@@ -192,7 +179,7 @@
   <div class="ghi">
     <span class="glbl">Halaman Guru & Admin</span>
     <h1 class="gttl">Ruang Kerja<br><em>Para Pendidik</em></h1>
-    <p class="gdsc">Jadwal mengajar, akses input pengumuman, serta kontak tim pengajar Sekolah Raihanah.</p>
+    <p class="gdsc">Jadwal mengajar, akses input pengumuman, serta kontak tim pengajar Sekolah Raihanah — Semester Genap 2025-2026 M.</p>
   </div>
 </section>
 
@@ -200,19 +187,80 @@
   <div class="ji">
     <div class="sl rv">Jadwal</div>
     <h2 class="sh2 rv d1">Jadwal <em>Mengajar</em></h2>
-    <p class="sp rv d2">Semester Genap 2024/2025 — Sekolah Raihanah.</p>
+    <p class="sp rv d2">Semester Genap 2025–2026 M · Senin–Kamis 08.00–12.00 · Jum'at Ekskul</p>
     <div class="jtw rv d2">
       <table class="jt">
-        <thead><tr><th>Guru</th><th>Hari</th><th>Waktu</th><th>Mata Pelajaran</th><th>Jenjang</th></tr></thead>
+        <thead><tr><th>Guru</th><th>Hari</th><th>Waktu</th><th>Mata Pelajaran & Kelompok</th></tr></thead>
         <tbody>
-          <tr><td><strong>Ust. Syaifullah Maslul</strong></td><td>Senin–Kamis</td><td>08.00–Dzuhur</td><td><div class="chips"><span class="chip">Aqidah</span><span class="chip">Fikih</span><span class="chip">Ushul Fikih</span></div></td><td><span class="jbg g">SMP & SMA</span></td></tr>
-          <tr><td><strong>Ust. Ahmad Fauzi</strong></td><td>Senin, Rabu</td><td>08.00–10.00</td><td><div class="chips"><span class="chip">Hadits</span><span class="chip">Tafsir</span><span class="chip">Mustholah</span></div></td><td><span class="jbg g">SMP</span></td></tr>
-          <tr><td><strong>Ust. Ibrahim Hasan</strong></td><td>Selasa, Kamis</td><td>08.00–10.00</td><td><div class="chips"><span class="chip">Hadits</span><span class="chip">Ushul Tafsir</span></div></td><td><span class="jbg g">SMA</span></td></tr>
-          <tr><td><strong>Ustadzah Fatimah</strong></td><td>Senin–Kamis</td><td>10.00–Dzuhur</td><td><div class="chips"><span class="chip">Bahasa Arab</span><span class="chip">Hiwar</span></div></td><td><span class="jbg g">SMP & SMA</span></td></tr>
-          <tr><td><strong>Ustadzah Maryam</strong></td><td>Selasa, Kamis</td><td>10.00–Dzuhur</td><td><div class="chips"><span class="chip">Nahwu</span><span class="chip">Sharaf</span><span class="chip">Balaghoh</span></div></td><td><span class="jbg g">SMA</span></td></tr>
-          <tr><td><strong>Ust. Yusuf Abdullah</strong></td><td>Jum'at</td><td>08.00–12.00</td><td><div class="chips"><span class="chip">Khat</span><span class="chip">Ekskul</span></div></td><td><span class="jbg go">Semua</span></td></tr>
-        </tbody>
+<tr>
+  <td><strong>Ust. Syaifullah Maslul, Lc., MA</strong> <span style="font-size:.68rem;background:var(--g-ultra);color:var(--g);font-weight:700;padding:2px 8px;border-radius:6px;margin-left:4px;">Mudir</span></td>
+  <td>Senin–Kamis</td>
+  <td>08.00–12.00</td>
+  <td>
+    <div style="font-size:.72rem;font-weight:700;color:var(--muted);margin-bottom:4px;">Kel. 1</div>
+    <div class="chips" style="margin-bottom:6px;"><span class="chip">B. Arab</span><span class="chip">Mustolah H.</span><span class="chip">Faroidh</span><span class="chip">Balaghoh</span><span class="chip">Nahwu</span><span class="chip">Shorof</span><span class="chip">Ushul Fiqih</span><span class="chip">Khat</span></div>
+    <div style="font-size:.72rem;font-weight:700;color:var(--muted);margin-bottom:4px;">Kel. 3 (Kamis saja)</div>
+    <div class="chips"><span class="chip">Aqidah</span><span class="chip">Siroh</span></div>
+  </td>
+</tr>
+<tr>
+  <td><strong>Ust. Ridwan Nashiruddin, SE.</strong></td>
+  <td>Senin–Kamis</td>
+  <td>08.00–12.00</td>
+  <td>
+    <div style="font-size:.72rem;font-weight:700;color:var(--muted);margin-bottom:4px;">Kel. 1</div>
+    <div class="chips" style="margin-bottom:6px;"><span class="chip">Hiwar</span><span class="chip">Nahwu</span><span class="chip">Shorof</span></div>
+    <div style="font-size:.72rem;font-weight:700;color:var(--muted);margin-bottom:4px;">Kel. 2</div>
+    <div class="chips"><span class="chip">B. Arab</span><span class="chip">Aqidah</span><span class="chip">Hadits</span><span class="chip">Hiwar</span><span class="chip">Nahwu</span><span class="chip">Shorof</span><span class="chip">Mustolah H.</span></div>
+  </td>
+</tr>
+<tr>
+  <td><strong>Ust. Muthy Abdullah, S.Pd.</strong></td>
+  <td>Selasa, Rabu, Kamis</td>
+  <td>08.00–12.00</td>
+  <td>
+    <div style="font-size:.72rem;font-weight:700;color:var(--muted);margin-bottom:4px;">Kel. 1, 2, 3</div>
+    <div class="chips"><span class="chip">Fiqih</span><span class="chip">Adab & Akhlak</span><span class="chip">Imla</span><span class="chip">Ushul Tafsir</span><span class="chip">Siroh</span><span class="chip">Aqidah</span><span class="chip">Khitobah</span></div>
+  </td>
+</tr>
+<tr>
+  <td><strong>Kak Fifah</strong></td>
+  <td>Selasa, Rabu</td>
+  <td>10.45–12.00</td>
+  <td>
+    <div class="chips"><span class="chip">Tahsin (Kel. 3)</span><span class="chip">Dzikir & Do'a (Kel. 3)</span></div>
+  </td>
+</tr>
+<tr>
+  <td><strong>Kak Maryam Fauziyyah</strong></td>
+  <td>Senin–Kamis</td>
+  <td>08.00–12.00</td>
+  <td>
+    <div class="chips"><span class="chip">Tahfidz Kel. 1</span><span class="chip">Hadits Kel. 3</span><span class="chip">Tasmi' Kel. 1,3</span><span class="chip">Khitobah Kel. 1,2,3</span></div>
+  </td>
+</tr>
+<tr>
+  <td><strong>Kak Zainab</strong></td>
+  <td>Senin–Kamis</td>
+  <td>08.00–12.00</td>
+  <td>
+    <div class="chips"><span class="chip">Tahfidz Kel. 2</span><span class="chip">Tahfidz Hadits Kel. 2,3</span><span class="chip">Khitobah Kel. 1,2,3</span></div>
+  </td>
+</tr>
+<tr>
+  <td><strong>Kak Luna Mahda Alya</strong></td>
+  <td>Rabu, Kamis</td>
+  <td>10.00–12.00</td>
+  <td>
+    <div class="chips"><span class="chip">Aqidah Kel. 3</span><span class="chip">Siroh Kel. 3</span><span class="chip">Khitobah Kel. 1,2,3</span></div>
+  </td>
+</tr>
+</tbody>
       </table>
+    </div>
+    <div style="margin-top:12px;font-size:.76rem;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;">
+      <span>📌 Kel. 1 = Kelompok 1 (tertinggi) &nbsp;·&nbsp; Kel. 2 = Kelompok 2 &nbsp;·&nbsp; Kel. 3 = Kelompok 3</span>
+      <span>* Jadwal dapat berubah sesuai kondisi</span>
     </div>
   </div>
 </section>
@@ -222,28 +270,28 @@
     <div class="ll rv">
       <div class="sl">Akses Guru</div>
       <h2>Login <em>Per Guru</em></h2>
-      <p>Tiap guru punya akun sendiri. Masuk untuk mengakses panel input pengumuman, pesan, dan kalender.</p>
+      <p>Tiap guru punya akun sendiri. Masuk untuk mengakses panel input pengumuman, pesan, dan update kalender.</p>
       <div class="lfeats">
-        <div class="lf"><div class="lfic">📢</div>Input pengumuman ke portal anggota</div>
-        <div class="lf"><div class="lfic">📅</div>Update kalender KBM</div>
-        <div class="lf"><div class="lfic">💬</div>Kirim pesan ke orang tua & siswa</div>
-        <div class="lf"><div class="lfic">🔒</div>Login terpisah per guru — aman & terlacak</div>
+        <div class="lf2"><div class="lfic">📢</div>Input pengumuman ke portal anggota</div>
+        <div class="lf2"><div class="lfic">📅</div>Update kalender KBM</div>
+        <div class="lf2"><div class="lfic">💬</div>Kirim pesan ke orang tua & siswa</div>
+        <div class="lf2"><div class="lfic">🔒</div>Login terpisah per guru</div>
       </div>
     </div>
     <div class="rv d1">
       <div id="lform" class="lcard">
         <div class="lcttl">Masuk sebagai Guru / Admin</div>
         <div class="lcsub">Gunakan username dan password yang diberikan admin sekolah.</div>
-        <div class="lf-field"><label class="lflbl">Username</label><input class="lfinp" type="text" id="gu" placeholder="contoh: ustadz.ahmad"></div>
+        <div class="lf-field"><label class="lflbl">Username</label><input class="lfinp" type="text" id="gu" placeholder="contoh: ustadz.ridwan"></div>
         <div class="lf-field"><label class="lflbl">Password</label><div class="lf-pw"><input class="lfinp" type="password" id="gpw" placeholder="Password" onkeydown="if(event.key==='Enter')gLogin()"><button class="lf-eye" onclick="var i=document.getElementById('gpw');i.type=i.type==='password'?'text':'password'">👁</button></div></div>
         <div class="lerr" id="gerr">Username atau password salah.</div>
         <button class="lbtn" onclick="gLogin()">Masuk →</button>
         <div class="lhelp">Lupa password? Hubungi <a href="https://wa.me/6285880699636">admin</a></div>
       </div>
-      <div id="gpanel" class="lcard" style="display:none;">
+      <div id="gpanel" class="lcard">
         <div class="pwelcome">
           <div class="pwicon" id="gicon">🎓</div>
-          <div><div class="pwname" id="gname">Guru</div><div class="pwrole" id="grole">—</div></div>
+          <div><div class="pwname" id="gname">—</div><div class="pwsub" id="gmapel">—</div></div>
           <button class="plo" onclick="gLogout()">Keluar ↩</button>
         </div>
         <div class="gtabs">
@@ -267,7 +315,7 @@
         </div>
         <div class="gpn" id="gp-cal">
           <label class="lflbl">Nama Kegiatan</label>
-          <input class="finp" type="text" placeholder="Contoh: Ujian Akhir Semester">
+          <input class="finp" type="text" placeholder="Contoh: Ujian Tengah Semester">
           <label class="lflbl">Tanggal</label>
           <input class="finp" type="date" style="margin-bottom:10px;">
           <label class="lflbl">Keterangan</label>
@@ -285,14 +333,74 @@
     <div class="sl rv">Tim Pengajar</div>
     <h2 class="sh2 rv d1">Kontak <em>Guru & Admin</em></h2>
     <div class="kggrid">
-      <div class="kgc rv d1"><div class="kgico">🏫</div><div class="kgname">Admin Sekolah</div><div class="kgrole">Administrator</div><div class="kgcon"><div class="kgci">🔑 Username: <strong>admin</strong></div><div class="kgci">📱 <a href="https://wa.me/6285880699636">0858 8069 9636</a></div><div class="kgci">📧 <a href="mailto:raihanahyayasan@gmail.com">raihanahyayasan@gmail.com</a></div></div></div>
-      <div class="kgc rv d1"><div class="kgico">🎓</div><div class="kgname">Ust. Syaifullah Maslul, Lc. MA</div><div class="kgrole">Mudir / Kepala Sekolah</div><div class="kgcon"><div class="kgci">🔑 Username: <strong>ustadz.syaifullah</strong></div><div class="kgci">🎓 Alumni LIPIA Jakarta</div><div class="kgci">📱 <a href="https://wa.me/6285880699636">Via Admin</a></div></div></div>
-      <div class="kgc rv d2"><div class="kgico">📖</div><div class="kgname">Ust. Ahmad Fauzi</div><div class="kgrole">Guru Diniyyah</div><div class="kgcon"><div class="kgci">🔑 Username: <strong>ustadz.ahmad</strong></div><div class="kgci">📚 Hadits, Tafsir, Mustholah</div></div></div>
-      <div class="kgc rv d2"><div class="kgico">📚</div><div class="kgname">Ust. Ibrahim Hasan</div><div class="kgrole">Guru Hadits & Tafsir</div><div class="kgcon"><div class="kgci">🔑 Username: <strong>ustadz.ibrahim</strong></div><div class="kgci">📚 Hadits, Ushul Tafsir</div></div></div>
-      <div class="kgc rv d3"><div class="kgico">🗣️</div><div class="kgname">Ustadzah Fatimah</div><div class="kgrole">Guru Bahasa Arab</div><div class="kgcon"><div class="kgci">🔑 Username: <strong>ustadzah.fatimah</strong></div><div class="kgci">🗣️ Bahasa Arab, Hiwar</div></div></div>
-      <div class="kgc rv d3"><div class="kgico">✍️</div><div class="kgname">Ustadzah Maryam</div><div class="kgrole">Guru Nahwu & Sharaf</div><div class="kgcon"><div class="kgci">🔑 Username: <strong>ustadzah.maryam</strong></div><div class="kgci">✍️ Nahwu, Sharaf, Balaghoh</div></div></div>
-      <div class="kgc rv d4"><div class="kgico">🌿</div><div class="kgname">Ust. Yusuf Abdullah</div><div class="kgrole">Koordinator Ekskul</div><div class="kgcon"><div class="kgci">🔑 Username: <strong>ustadz.yusuf</strong></div><div class="kgci">🌿 Khat, Ekstrakulikuler</div></div></div>
-    </div>
+<div class="kgc rv d1">
+  <div class="kgico">🎓</div>
+  <div class="kgname">Ust. Syaifullah Maslul, Lc., MA</div>
+  <div class="kgrole" style="color:var(--g);">Mudir</div>
+  <div class="kgcon">
+    <div class="kgci">🔑 <strong>ustadz.syaifullah</strong></div>
+    <div class="kgci">📚 B. Arab, Nahwu, Shorof, Balaghoh, Khat, Faroidh, Mustolah H., Ushul Fiqih</div>
+    <div class="kgci">📱 <a href="https://wa.me/6285880699636">0858 8069 9636</a></div>
+  </div>
+</div>
+<div class="kgc rv d1">
+  <div class="kgico">📖</div>
+  <div class="kgname">Ust. Ridwan Nashiruddin, SE.</div>
+  <div class="kgcon">
+    <div class="kgci">🔑 <strong>ustadz.ridwan</strong></div>
+    <div class="kgci">📚 Hiwar, B. Arab, Aqidah, Shorof, Nahwu, Hadits, Mustolah H.</div>
+  </div>
+</div>
+<div class="kgc rv d2">
+  <div class="kgico">📚</div>
+  <div class="kgname">Ust. Muthy Abdullah, S.Pd.</div>
+  <div class="kgcon">
+    <div class="kgci">🔑 <strong>ustadz.muthy</strong></div>
+    <div class="kgci">📚 Fiqih, Adab & Akhlak, Imla, Ushul Tafsir, Siroh, Aqidah, Khitobah</div>
+  </div>
+</div>
+<div class="kgc rv d2">
+  <div class="kgico">🌸</div>
+  <div class="kgname">Kak Fifah</div>
+  <div class="kgcon">
+    <div class="kgci">🔑 <strong>kak.fifah</strong></div>
+    <div class="kgci">📚 Tahsin, Dzikir & Do'a</div>
+  </div>
+</div>
+<div class="kgc rv d3">
+  <div class="kgico">📿</div>
+  <div class="kgname">Kak Maryam Fauziyyah</div>
+  <div class="kgcon">
+    <div class="kgci">🔑 <strong>kak.maryam</strong></div>
+    <div class="kgci">📚 Tahfidz, Hadits, Tasmi', Khitobah</div>
+  </div>
+</div>
+<div class="kgc rv d3">
+  <div class="kgico">🌺</div>
+  <div class="kgname">Kak Zainab</div>
+  <div class="kgcon">
+    <div class="kgci">🔑 <strong>kak.zainab</strong></div>
+    <div class="kgci">📚 Tahfidz, Tahfidz Hadits, Khitobah</div>
+  </div>
+</div>
+<div class="kgc rv d4">
+  <div class="kgico">🌙</div>
+  <div class="kgname">Kak Luna Mahda Alya</div>
+  <div class="kgcon">
+    <div class="kgci">🔑 <strong>kak.luna</strong></div>
+    <div class="kgci">📚 Aqidah, Siroh, Khitobah</div>
+  </div>
+</div>
+<div class="kgc rv d4">
+  <div class="kgico">🏫</div>
+  <div class="kgname">Admin Sekolah</div>
+  <div class="kgcon">
+    <div class="kgci">🔑 <strong>admin</strong></div>
+    <div class="kgci">📱 <a href="https://wa.me/6285880699636">0858 8069 9636</a></div>
+    <div class="kgci">📧 <a href="mailto:raihanahyayasan@gmail.com">raihanahyayasan@gmail.com</a></div>
+  </div>
+</div>
+</div>
   </div>
 </section>
 </div>
@@ -307,49 +415,12 @@
   </div>
 </div></footer>
 <script>
-var GA = {"admin": {"pass": "admin01", "name": "Admin Sekolah", "role": "Administrator", "icon": "\ud83c\udfeb"}, "usyaifullah": {"pass": "syaif01", "name": "Ust. Muhammad Syaifullah Maslul", "role": "Mudir / Kepala Sekolah", "icon": "\ud83c\udf93"}, "uridwan": {"pass": "ridwan01", "name": "Ust. Muhammad Ridwan Nashiruddin", "role": "Guru", "icon": "\ud83d\udcd6"}, "kzainab": {"pass": "zainab01, "name": "Kak. Zainab Z", "role": "Guru / Kakak Pembimbing", "icon": "\ud83d\udcda"}, "kmaryam": {"pass": "maryam01", "name": "Kak. Risa Maryam F", "role": "Guru / Kakak Pembimbing", "icon": "\ud83d\udde3\ufe0f"}, "ustadzah.maryam": {"pass": "maryam2024", "name": "Ustadzah Maryam", "role": "Guru Nahwu & Sharaf", "icon": "\u270d\ufe0f"}, "ustadz.yusuf": {"pass": "yusuf2024", "name": "Ust. Yusuf Abdullah", "role": "Koordinator Ekskul", "icon": "\ud83c\udf3f"}};
-function gLogin(){
-  var u=document.getElementById('gu').value.trim();
-  var p=document.getElementById('gpw').value.trim();
-  if(GA[u]&&GA[u]['pass']===p){
-    document.getElementById('lform').style.display='none';
-    var gp=document.getElementById('gpanel');
-    gp.style.display='block';gp.classList.add('show');
-    document.getElementById('gicon').textContent=GA[u]['icon'];
-    document.getElementById('gname').textContent=GA[u]['name'];
-    document.getElementById('grole').textContent=GA[u]['role'];
-    sessionStorage.setItem('guru_u',u);
-  }else{
-    document.getElementById('gerr').classList.add('show');
-  }
-}
-function gLogout(){
-  sessionStorage.removeItem('guru_u');
-  document.getElementById('lform').style.display='block';
-  document.getElementById('gpanel').style.display='none';
-  document.getElementById('gpw').value='';
-  document.getElementById('gu').value='';
-  document.getElementById('gerr').classList.remove('show');
-}
-function gTab(name,btn){
-  document.querySelectorAll('.gtab').forEach(function(b){b.classList.remove('act');});
-  document.querySelectorAll('.gpn').forEach(function(p){p.classList.remove('act');});
-  btn.classList.add('act');
-  document.getElementById('gp-'+name).classList.add('act');
-  ['ann','msg','cal'].forEach(function(k){var s=document.getElementById('suc-'+k);if(s)s.classList.remove('show');});
-}
+var GA={"admin": {"pass": "Raihanah2024", "name": "Admin Sekolah", "icon": "\ud83c\udfeb", "mapel": []}, "ustadz.syaifullah": {"pass": "syaif2024", "name": "Ust. Syaifullah Maslul, Lc., MA", "icon": "\ud83c\udf93", "mapel": ["B. Arab", "Mustolah Hadits", "Faroidh", "Khat", "Balaghoh", "Nahwu", "Shorof", "Ushul Fiqih"]}, "ustadz.ridwan": {"pass": "ridwan2024", "name": "Ust. Ridwan Nashiruddin, SE.", "icon": "\ud83d\udcd6", "mapel": ["Hiwar", "B. Arab", "Aqidah", "Shorof", "Nahwu", "Hadits", "Mustolah Hadits"]}, "ustadz.muthy": {"pass": "muthy2024", "name": "Ust. Muthy Abdullah, S.Pd.", "icon": "\ud83d\udcda", "mapel": ["Fiqih", "Adab & Akhlak", "Imla", "Ushul Tafsir", "Siroh", "Aqidah", "Khitobah"]}, "kak.fifah": {"pass": "fifah2024", "name": "Kak Fifah (Ustadzah Afifah)", "icon": "\ud83c\udf38", "mapel": ["Tahsin", "Dzikir & Do'a"]}, "kak.maryam": {"pass": "maryam2024", "name": "Kak Maryam Fauziyyah", "icon": "\ud83d\udcff", "mapel": ["Tahfidz", "Hadits", "Tasmi'", "Khitobah"]}, "kak.zainab": {"pass": "zainab2024", "name": "Kak Zainab", "icon": "\ud83c\udf3a", "mapel": ["Tahfidz", "Tahfidz Hadits", "Khitobah"]}, "kak.luna": {"pass": "luna2024", "name": "Kak Luna Mahda Alya", "icon": "\ud83c\udf19", "mapel": ["Aqidah", "Siroh", "Khitobah"]}};
+function gLogin(){var u=document.getElementById('gu').value.trim();var p=document.getElementById('gpw').value.trim();if(GA[u]&&GA[u]['pass']===p){document.getElementById('lform').style.display='none';var gp=document.getElementById('gpanel');gp.style.display='block';document.getElementById('gicon').textContent=GA[u]['icon'];document.getElementById('gname').textContent=GA[u]['name'];var mp=GA[u]['mapel'];document.getElementById('gmapel').textContent=mp.length?'📚 '+mp.join(', '):'';sessionStorage.setItem('guru_u',u);document.getElementById('gerr').classList.remove('show');}else{document.getElementById('gerr').classList.add('show');}}
+function gLogout(){sessionStorage.removeItem('guru_u');document.getElementById('lform').style.display='block';document.getElementById('gpanel').style.display='none';document.getElementById('gpw').value='';document.getElementById('gu').value='';document.getElementById('gerr').classList.remove('show');}
+function gTab(n,btn){document.querySelectorAll('.gtab').forEach(function(b){b.classList.remove('act');});document.querySelectorAll('.gpn').forEach(function(p){p.classList.remove('act');});btn.classList.add('act');document.getElementById('gp-'+n).classList.add('act');['ann','msg','cal'].forEach(function(k){var s=document.getElementById('suc-'+k);if(s)s.classList.remove('show');});}
 function showSuc(t){var s=document.getElementById('suc-'+t);if(s){s.classList.add('show');setTimeout(function(){s.classList.remove('show');},3000);}}
-window.addEventListener('load',function(){
-  var u=sessionStorage.getItem('guru_u');
-  if(u&&GA[u]){
-    document.getElementById('lform').style.display='none';
-    var gp=document.getElementById('gpanel');
-    gp.style.display='block';gp.classList.add('show');
-    document.getElementById('gicon').textContent=GA[u]['icon'];
-    document.getElementById('gname').textContent=GA[u]['name'];
-    document.getElementById('grole').textContent=GA[u]['role'];
-  }
-});
+window.addEventListener('load',function(){var u=sessionStorage.getItem('guru_u');if(u&&GA[u]){document.getElementById('lform').style.display='none';var gp=document.getElementById('gpanel');gp.style.display='block';document.getElementById('gicon').textContent=GA[u]['icon'];document.getElementById('gname').textContent=GA[u]['name'];var mp=GA[u]['mapel'];document.getElementById('gmapel').textContent=mp.length?'📚 '+mp.join(', '):'';}} );
 </script>
 
 <script>
